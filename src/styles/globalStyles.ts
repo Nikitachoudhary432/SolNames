@@ -262,13 +262,3 @@ export const HIDE_SCROLLBAR_BUT_ALLOW_SCROLLING = css`
     display: none; /* for Chrome, Safari, and Opera */
   }
 `;
-
-.tab-item {
-  font-size: 18px; 
-}
-
-@media screen and (max-width: 768px) {
-  .tab-item {
-    font-size: 14px;
-  }
-}
