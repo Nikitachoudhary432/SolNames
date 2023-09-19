@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 import SubDomains from 'assets/svg/subdomain.svg';
-import TextField from '@mui/material/TextField';
-import InputLabel from '@mui/material/InputLabel';
+import { TextField, InputLabel } from '@mui/material';
 
 export const RemoveModal = (props: any) => {
   return (
@@ -24,21 +23,20 @@ export const RemoveModal = (props: any) => {
       </Typography>
       <div className="flex flex-col justify-center items-center mt-4 pb-4 w-full">
         <div className="flex flex-col md:flex-row justify-around w-full items-center p-2 bg-[#262626] rounded-lg ">
-          <img src={SubDomains} alt="" className='mr-2'/>
+          <img src={SubDomains} alt="" className="mr-2" />
           <div className="flex items-center text-sm sm:text-base lg:text-md">
             <Head className="text-[#E5E5E5]">Jamesmusa</Head>
             <Text className="text-[#757a7b]">.solnames</Text>
           </div>
         </div>
         <div className="mt-3 w-full">
-          <div
-            component="form"
-            sx={{
-              '& .MuiTextField-root': { width: '100%' },
-              '& .MuiInputLabel-formControl': { color: '#A3A3A3' },
-              '& .MuiInputLabel-inputlabel': { color: '#A3A3A3' },
-              '& .MuiInputBase-input': { color: '#FFFFFF', width: '100%' },
-            }}
+          <form
+            // sx={{
+            //   '& .MuiTextField-root': { width: '100%' },
+            //   '& .MuiInputLabel-formControl': { color: '#A3A3A3' },
+            //   '& .MuiInputLabel-inputlabel': { color: '#A3A3A3' },
+            //   '& .MuiInputBase-input': { color: '#FFFFFF', width: '100%' },
+            // }}
             noValidate
             autoComplete="off"
           >
@@ -99,7 +97,7 @@ export const RemoveModal = (props: any) => {
                 width: '100%',
               }}
             />
-          </div>
+          </form>
         </div>
         <Button1 className="mx-5">Confirm</Button1>
         <Button2 className="mx-5" onClick={props.onClose}>

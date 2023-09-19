@@ -33,14 +33,14 @@ export const RemoveModal = (props: any) => {
               </div>
             </div>
             <div className="mt-3">
-              <div
-                component="form"
-                sx={{
-                  '& .MuiTextField-root': { m: 1, width: '100%' },
-                  '& .MuiInputLabel-formControl': { color: '#A3A3A3' },
-                  '& .MuiInputLabel-inputlabel': { color: '#A3A3A3' },
-                  '& .MuiInputBase-input': { color: '#FFFFFF', width: '100%' },
-                }}
+              <form
+                // component="form"
+                // sx={{
+                //   '& .MuiTextField-root': { width: '100%' },
+                //   '& .MuiInputLabel-formControl': { color: '#A3A3A3' },
+                //   '& .MuiInputLabel-inputlabel': { color: '#A3A3A3' },
+                //   '& .MuiInputBase-input': { color: '#FFFFFF', width: '100%' },
+                // }}
                 noValidate
                 autoComplete="off"
               >
@@ -88,7 +88,7 @@ export const RemoveModal = (props: any) => {
                     paddingTop: '5px',
                   }}
                 />
-              </div>
+              </form>
             </div>
             <Button1 className="mx-5">Remove Subdomain</Button1>
             <Button2 className="mx-5">Cancel</Button2>
@@ -172,7 +172,7 @@ const Button1 = styled.button`
 const Button2 = styled.button`
   background-color: transparent;
   border: 1px solid var(--green);
-  color:  var(--green);
+  color: var(--green);
   width: 100%;
   border-radius: 30px;
   padding: 15px;
