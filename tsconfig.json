@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "types": ["vite/client", "node", "jest", "@testing-library/jest-dom"],
+    "typeRoots": ["./@types"],
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -16,7 +17,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
       "assets/*": ["./src/assets/*"],
@@ -25,7 +26,8 @@
       "pages/*": ["./src/pages/*"],
       "store/*": ["./src/store/*"],
       "styles/*": ["./src/styles/*"],
-      "utils/*": ["./src/utils/*"]
+      "utils/*": ["./src/utils/*"],
+      "@trendmicro/react-sidenav": ["./@types/@trendmicro__react-sidenav.d.ts"]
     }
   },
   "include": ["vite.config.ts", ".eslintrc.cjs", "src"],

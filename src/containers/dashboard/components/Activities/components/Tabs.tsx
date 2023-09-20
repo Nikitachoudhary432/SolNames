@@ -12,7 +12,7 @@ export const ActivitiesTabs = () => {
   };
 
   return (
-    <Wrapper className="p-6 sm:w-full w-full lg:w-full">
+    <Wrapper className="p-6 w-[85%] md:w-full lg:w-full">
       <Tabs value={value} onChange={handleChange}>
         <Tab value="1" label="All" />
         <Tab value="2" label="Listed" />

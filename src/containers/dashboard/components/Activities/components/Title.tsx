@@ -4,7 +4,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { CompareArrow } from '@/assets/CompareArrow';
 import { Button } from '@mui/material';
 
-export const ActivitiesTitle = ({ showItems, toggleItems }) => {
+export const ActivitiesTitle = ({ showItems, toggleItems }: any) => {
   return (
     <Wrapper>
       <ArrowRightButton onClick={toggleItems}>

@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import SideNav, {
-  Toggle,
-  Nav,
-  NavItem,
-  NavIcon,
-  NavText,
-} from '@trendmicro/react-sidenav';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import { Button } from '@mui/material';
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Checkbox,
+  Button,
+} from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { IoOptionsSharp } from 'react-icons/io5';
 import { PiArrowsHorizontalBold } from 'react-icons/pi';
-import { BiSolidCategoryAlt } from 'react-icons/bi';
 import { AiOutlineClockCircle } from 'react-icons/ai';
+import './style.css';
 
 const NavLinks = [
   {
@@ -46,6 +46,20 @@ const Year = [
 export function Sidebar() {
   const [checkboxes, setCheckboxes] = useState<{ [key: string]: boolean }>({});
   const [showItems, setShowItems] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState('transparent');
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleCheckbox = (itemName: string) => {
     setCheckboxes((prevState) => ({
@@ -56,120 +70,103 @@ export function Sidebar() {
 
   const toggleItems = () => {
     setShowItems((prevShowItems) => !prevShowItems);
-  };
-
-  const isSmallScreen = window.innerWidth < 768;
-
-  const sidebarStyle = {
-    position: isSmallScreen ? 'absolute' : 'relative',
-    left: '0',
-    marginTop: '14px',
-    backgroundColor: 'transparent',
+    setBackgroundColor((prevBackgroundColor) =>
+      prevBackgroundColor === 'transparent' ? 'black' : 'transparent'
+    );
   };
 
   return (
-    <div className="h-[100vh]">
-      <SideNav style={sidebarStyle}>
-        <div className="flex flex-row-reverse ">
+    <div className="h-100vh">
+      <Drawer
+        variant="persistent"
+        anchor="left"
+        open={true}
+        style={{
+          width: isSmallScreen ? '50px' : '200px',
+          flexShrink: 0,
+          backgroundColor: backgroundColor,
+        }}
+      >
+        <div className="flex flex-row-reverse mt-11">
           <ArrowRightButton onClick={toggleItems}>
             <KeyboardArrowRightIcon />
           </ArrowRightButton>
 
-          <div className="flex justify-center items-center w-fit ">
-            <IoOptionsSharp size={30} className="text-white" />
-            <>
+          {!isSmallScreen && (
+            <div className="flex justify-center items-center w-fit">
+              <IoOptionsSharp size={30} className="text-white" />
               {!showItems && <h3 className="pl-2 text-white">Filter Menu</h3>}
-            </>
-          </div>
+            </div>
+          )}
         </div>
 
         {!showItems && (
-          <SideNav.Nav>
+          <List>
             {NavLinks.map((item) => (
-              <NavItem
-                key={item.name}
-                eventKey={item.name}
-                //   onClick={() => handleClick(item)}
-              >
-                <NavText
-                  style={{ color: 'white' }}
-                  className="flex justify-between items-center"
-                >
-                  {item.name}
-                </NavText>
-                <div className="checkbox text-end">
-                  <input
-                    type="checkbox"
+              <ListItem key={item.name}>
+                <ListItemText primary={item.name} />
+                <ListItemIcon style={{ color: 'tranparent' }}>
+                  <Checkbox
                     checked={!!checkboxes[item.name]}
                     onChange={() => toggleCheckbox(item.name)}
                   />
-                </div>
-              </NavItem>
+                </ListItemIcon>
+              </ListItem>
             ))}
-          </SideNav.Nav>
+          </List>
+        )}
+        {!showItems && (
+          <List>
+            <div className="flex justify-center items-center w-fit my-5">
+              <PiArrowsHorizontalBold size={30} className="text-white" />
+              <h3 className="pl-2 text-white">Length</h3>
+            </div>
+            {Digit.map((item) => (
+              <ListItem key={item.name}>
+                <ListItemText primary={item.name} />
+                <ListItemIcon>
+                  <Checkbox
+                    checked={!!checkboxes[item.name]}
+                    onChange={() => toggleCheckbox(item.name)}
+                  />
+                </ListItemIcon>
+              </ListItem>
+            ))}
+          </List>
         )}
 
         {!showItems && (
-          <SideNav.Nav>
+          <List>
             <div className="flex justify-center items-center w-fit my-5">
-              <PiArrowsHorizontalBold size={30} className="text-white" />
-              <>
-                <h3 className="pl-2 text-white">Length</h3>
-              </>
-            </div>
-            {Digit.map((item) => (
-              <NavItem key={item.name} eventKey={item.name}>
-                <NavText style={{ color: 'white' }}>{item.name}</NavText>
-                <div className="checkbox text-end">
-                  <input
-                    type="checkbox"
-                    checked={!!checkboxes[item.name]}
-                    onChange={() => toggleCheckbox(item.name)}
-                  />
-                </div>
-              </NavItem>
-            ))}
-          </SideNav.Nav>
-        )}
-        {!showItems && (
-          <SideNav.Nav>
-            <div className="flex justify-center items-center w-fit my-5">
-              <>
-                <h3 className="pl-2 text-white">Price (SOL)</h3>
-              </>
+              <h3 className="pl-2 text-white">Price (SOL)</h3>
             </div>
             <div className="flex items-center">
               {' '}
               <Item>Min</Item> to <Item>Max</Item>
             </div>
-          </SideNav.Nav>
+          </List>
         )}
+
         {!showItems && (
-          <SideNav.Nav>
+          <List>
             <div className="flex justify-center items-center w-fit my-5">
               <AiOutlineClockCircle size={30} className="text-white" />
-              <>
-                <h3 className="pl-2 text-white">Expiration</h3>
-              </>
+              <h3 className="pl-2 text-white">Expiration</h3>
             </div>
             {Year.map((item) => (
-              <NavItem
-                key={item.name}
-                eventKey={item.name}
-              >
-                <NavText style={{ color: 'white' }}>{item.name}</NavText>
-                <div className="checkbox text-end">
-                  <input
-                    type="checkbox"
+              <ListItem key={item.name}>
+                <ListItemText primary={item.name} />
+                <ListItemIcon>
+                  <Checkbox
                     checked={!!checkboxes[item.name]}
                     onChange={() => toggleCheckbox(item.name)}
                   />
-                </div>
-              </NavItem>
+                </ListItemIcon>
+              </ListItem>
             ))}
-          </SideNav.Nav>
+          </List>
         )}
-      </SideNav>
+      </Drawer>
     </div>
   );
 }

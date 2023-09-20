@@ -1,0 +1,60 @@
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    background-color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1 0 auto;
+    z-index: 1200;
+    padding-left: 20px;
+    overflow-y: hidden;
+  }
+  
+  @media screen and (max-width: 560px) {
+    .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+      background-color: rgb(5, 5, 5) !important;
+      padding-left: 0px;
+    }
+  }
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  background-color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  outline: 0;
+  left: 0;
+}
+/* @media screen and (max-width: 560) {
+  .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    background-color: transparent !important;
+  }
+} */
+
+.css-h4y409-MuiList-root {
+  color: #ffff;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+  padding: 9px;
+  border-radius: 50%;
+  color: white;
+}

@@ -21,8 +21,8 @@ export const Activities = () => {
 };
 
 const Wrapper = styled.section`
-  padding: 21px 29px 43px 29px;
-  background: rgba(7, 8, 7, 0.5);
+  padding: 15px;
+  background: rgba(19, 21, 19, 0.5);
   height: auto;
   width: auto;
 `;

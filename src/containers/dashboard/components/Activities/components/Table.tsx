@@ -17,7 +17,7 @@ export const ActivitiesTable = () => {
   });
 
   return (
-    <Wrapper className="p-6 sm:w-full w-full lg:w-full">
+    <Wrapper className="p-6 w-[85%] md:w-full lg:w-full">
       <table>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (

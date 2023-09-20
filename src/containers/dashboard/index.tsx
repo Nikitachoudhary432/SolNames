@@ -35,7 +35,7 @@ const Wrapper = styled.main`
   z-index: 1;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 5px;
   background: rgba(12, 12, 12, 0.5);
   box-shadow: 0px 7px 24px 2px rgba(0, 0, 0, 0.11);
   min-height: calc(100% - var(--header-height));
@@ -46,7 +46,7 @@ const Wrapper = styled.main`
 const ContentContainer = styled.div`
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;

@@ -102,7 +102,6 @@ const Wrapper = styled.main`
   gap: 30px;
   background: rgba(12, 12, 12, 0.5);
   box-shadow: 0px 7px 24px 2px rgba(0, 0, 0, 0.11);
-  min-height: calc(100% - var(--header-height));
   padding: 30px 10px;
   margin-top: 50px;
 `;
