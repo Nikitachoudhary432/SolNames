@@ -14,7 +14,7 @@ export function LandingPage() {
     <>
       <First />
       <Wrapper>
-        <Sidebar />
+        {/* <Sidebar /> */}
         <ContentContainer>
           <MiddleSection>
             <DomainFilters />
@@ -60,8 +60,7 @@ const MiddleSection = styled.section`
   @media (max-width: 768px) {
     /* Apply relative positioning on small screens */
     position: relative;
-    width: 100%;
-    margin-left: 20px;
+    margin: 20px;
   }
 
   @media (min-width: 769px) {

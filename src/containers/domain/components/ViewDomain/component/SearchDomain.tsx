@@ -76,7 +76,7 @@ export const SearchDomain = () => {
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              <Boxs className="w-[60%] lg:w-[40%] md:w-[60%]">
+              <Boxs className="w-[75%] lg:w-[30%] md:w-[50%]">
                 <div className="flex flex-col justify-center items-center p-5">
                   <div className="flex items-center">
                     <GiPadlock size={35} className="mr-4" />
@@ -99,7 +99,7 @@ export const SearchDomain = () => {
                     </div>
                   </Item>
                 </div>
-                <Title className="my-4 flex items-center">
+                <Title className="my-4 flex items-center text-xs lg:text-base md:text-sm">
                   <PiWarningCircleBold />
                   You’ll be asked to approve this purchase from your wallet.
                 </Title>
@@ -146,8 +146,8 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
-const Title = styled.h1`
-  font-weight: 700;
+const Title = styled.p`
+  /* font-weight: 700; */
 `;
 const Text = styled.p`
   color: #a6a6a6;

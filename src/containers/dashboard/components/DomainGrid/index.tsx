@@ -17,7 +17,7 @@ export const DomainGrid = () => {
   });
 
   return (
-    <Wrapper className="p-6 sm:w-4/5 w-5/6 lg:w-full">
+    <Wrapper className="p-6 sm:w-full  lg:w-full">
       <table>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
