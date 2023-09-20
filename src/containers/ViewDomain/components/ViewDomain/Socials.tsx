@@ -20,7 +20,7 @@ export const Socials = () => {
   };
 
   return (
-    <div className="p-4 px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
+    <div className="p-4 px-3 md:px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
       <Title className="text-lg sm:text-xl lg:text-2xl font-bold overflow-hidden">
         Socials
       </Title>
@@ -28,7 +28,7 @@ export const Socials = () => {
         Link your domain to your social media acounts.
       </Text>
       <div className="w-full">
-        <Wrapper className="p-4 px-2 md:px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
+        <Wrapper className="p-4 px-2 md:px-4 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
           <Title className=" text-md lg:text-xl md:text-lg my-4">
             Texts and Links
           </Title>

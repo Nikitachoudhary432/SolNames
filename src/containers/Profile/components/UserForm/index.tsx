@@ -15,11 +15,11 @@ export const UserForm = () => {
   return (
     <Wrapper className="p-4 px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left bg-[#121212] ">
       <div className="flex flex-col md:flex-row  justify-between items-center w-full">
-        <div>
+        <div className="w-full">
           <Title className="text-2xl my-5 ">General information</Title>
           <Text className="text-[#A6A6A6]">Add all Personal Information </Text>
         </div>
-        <div>
+        <div className="flex justify-end w-full">
           <button
             className="bg-[#404040] text-[#A3A3A3] px-5 py-2 my-1 rounded-lg"
             onClick={openModal}

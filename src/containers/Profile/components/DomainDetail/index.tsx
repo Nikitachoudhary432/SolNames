@@ -38,7 +38,7 @@ export const DomainDetails = () => {
                 </div>
                 <div className="flex justify-center items-center w-full mb-2 bg-[#151515] rounded-lg p-4 mt-4">
                   <Link to="/viewdomain">
-                    <Button className="lg:px-7 lg:py-3 sm:text-base px-5 py-2 w-60 md:w-48 text-xs md:text-sm lg:text-sm">
+                    <Button className="lg:px-7 lg:py-3 sm:text-base px-5 py-2 w-40 md:w-36 lg:w-44 text-xs md:text-sm lg:text-sm">
                       View Domain
                     </Button>
                   </Link>

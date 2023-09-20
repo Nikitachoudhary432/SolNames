@@ -15,7 +15,7 @@ export const Records = () => {
   };
 
   return (
-    <div className="p-4 px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
+    <div className="p-4 px-3 md:px-8  sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
       <Title className="text-xl sm:text-2xl lg:text-3xl font-bold overflow-hidden">
         Records
       </Title>
@@ -24,7 +24,7 @@ export const Records = () => {
         name.
       </Text>
       <div>
-        <Wrapper className="p-4 px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
+        <Wrapper className="p-4 px-4 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left ">
           <div className="grid lg:gap-5 gap-3 lg:grid-cols-4  py-10 ">
             <div className="flex flex-col justify-center">
               <Title className=" text-md lg:text-xl md:text-lg my-4">
@@ -82,7 +82,7 @@ export const Records = () => {
               </Modal>
             </div>
           </div>
-          <Button3 className="mx-5 my-14 w-[50%] lg:w-[20%] md:w-[30%]">
+          <Button3 className="mx-5 my-14  w-[80%] sm:w-[40%] lg:w-[20%] md:w-[30%]">
             Add wallet
           </Button3>
         </Wrapper>

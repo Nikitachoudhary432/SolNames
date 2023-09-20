@@ -13,9 +13,9 @@ export const ConnectionBox = () => {
 
   return (
     <Wrapper className="p-6 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-center ">
-      <div className="lg:py-3 py-2 px-5 flex bg-[#212121] border border-black items-center rounded-full w-full">
+      <div className="lg:py-3 py-2 pl-5 pr-2 flex bg-[#212121] border border-black items-center rounded-full w-full">
         <Input placeholder="Jamesyy" />
-        <Buttons className="lg:px-7 lg:py-3 sm:text-base px-5 py-2 w-60 md:w-48 text-xs md:text-sm lg:text-sm">
+        <Buttons className="lg:px-7 lg:py-3 sm:text-base px-5 py-2 w-20 sm:w-48 text-xs md:text-sm lg:text-sm">
           Search domain
         </Buttons>
       </div>
