@@ -20,15 +20,15 @@ export const SubDomain = () => {
           <Title className="text-lg my-4 ">Filter</Title>
         </Boxs>
         <Boxs className=" flex flex-col">
-          <div className="flex flex-col md:flex-row justify-between items-center w-full border-b-2 border-gray-900 m-4 pb-4">
-            <div className="flex flex-col md:flex-row justify-around w-full items-center mx-5">
-              <img src={SubDomains} alt="" className='mr-2'/>
+          <div className="flex flex-col lg:flex-row justify-between items-center w-full border-b-2 border-gray-900 m-4 pb-4">
+            <div className="flex flex-col md:flex-row justify-around w-full items-center mx-5 md:pb-3">
+              <img src={SubDomains} alt="" className="mr-2" />
               <div className="flex items-center text-sm md:text-base lg:text-xl">
                 <Head className="text-[#E5E5E5]">myproject.Jamesmusa</Head>
                 <Text className="text-[#757a7b]">.solnames</Text>
               </div>
             </div>
-            <div className="flex justify-center md:justify-end w-full items-center mx-5 text-sm sm:text-base lg:text-md">
+            <div className="flex justify-center lg:justify-end md:justify-start md:pt-2 md:pl-2 md:border-t-2 border-gray-950  w-full items-center mx-5 text-sm sm:text-base lg:text-md">
               <Datee>First created 50 days ago</Datee>
               <RxCross2
                 className="bg-[#292828] w-7 h-7 p-2 rounded-md ml-3"
@@ -42,19 +42,26 @@ export const SubDomain = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center w-full border-b-2 border-gray-900 m-4 pb-4">
-            <div className="flex  flex-col md:flex-row justify-around w-full items-center mx-5">
-              <img src={SubDomains} alt="" className='mr-2' />
+
+          <div className="flex flex-col lg:flex-row justify-between items-center w-full border-b-2 border-gray-900 m-4 pb-4">
+            <div className="flex flex-col md:flex-row justify-around w-full items-center mx-5 md:pb-3">
+              <img src={SubDomains} alt="" className="mr-2" />
               <div className="flex items-center text-sm md:text-base lg:text-xl">
                 <Head className="text-[#E5E5E5]">myproject.Jamesmusa</Head>
                 <Text className="text-[#757a7b]">.solnames</Text>
               </div>
             </div>
-            <div className="flex justify-center md:justify-end w-full items-center mx-5 text-sm sm:text-base lg:text-md">
+            <div className="flex justify-center lg:justify-end md:justify-start md:pt-2 md:pl-2 md:border-t-2 border-gray-950  w-full items-center mx-5 text-sm sm:text-base lg:text-md">
               <Datee>First created 50 days ago</Datee>
               <RxCross2
                 className="bg-[#292828] w-7 h-7 p-2 rounded-md ml-3"
                 onClick={handleRemove}
+              />
+              <RemoveModal
+                open={removeModal}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
               />
             </div>
           </div>
@@ -163,8 +170,8 @@ const Button1 = styled.button`
 
 const Button2 = styled.button`
   background-color: transparent;
-  border: 1px solid  var(--green);
-  color:  var(--green);
+  border: 1px solid var(--green);
+  color: var(--green);
   width: 100%;
   border-radius: 30px;
   padding: 15px;

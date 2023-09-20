@@ -8,12 +8,12 @@ import { Header } from './components/header';
 
 export function App() {
   return (
-    <>
-      <CustomToastContainer />
-      <Header />
-      <Blockchain />
+    <Router>
+      <>
+        <CustomToastContainer />
+        <Header />
+        <Blockchain />
 
-      <Router>
         <Routes>
           {appRoutes.map((route) => (
             <Route
@@ -25,8 +25,8 @@ export function App() {
 
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
-      </Router>
-    </>
+      </>
+    </Router>
   );
 }
 

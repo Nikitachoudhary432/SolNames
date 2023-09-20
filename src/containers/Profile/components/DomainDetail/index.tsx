@@ -18,7 +18,9 @@ export const DomainDetails = () => {
   return (
     <div className="p-6 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-center ">
       <div className="flex justify-between w-full text-white px-4">
-        <Title className="py-6 text-left text-lg lg:text-2xl md:text-xl">My Active Domains</Title>
+        <Title className="py-6 text-left text-lg lg:text-2xl md:text-xl">
+          My Active Domains
+        </Title>
         <Text className="flex items-center text-white">
           View all <IoIosArrowForward className="ml-3" />
         </Text>
@@ -30,7 +32,7 @@ export const DomainDetails = () => {
               <Text>
                 <div className="relative flex items-center justify-center">
                   <img src={item.image} alt="" className="" />
-                  <Title className="absolute h-40 text-lg lg:text-2xl md:text-2xl flex justify-center items-center text-white ">
+                  <Title className="absolute h-40 text-md lg:text-2xl md:text-xl flex justify-center items-center text-white ">
                     {item.name}
                   </Title>
                 </div>

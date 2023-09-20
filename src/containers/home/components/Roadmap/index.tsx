@@ -102,9 +102,9 @@ export const Roadmap = () => {
   ];
 
   return (
-    <Wrapper className="mb-24 p-5 container">
+    <Wrapper className="mb-24 px-5 container">
       <Content>
-        <div className="pt-8 lg:pt-8 px-6 sm:px-16 lg:px-20 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide">
+        <div className="pt-4 lg:pt-2 px-6 sm:px-16 lg:px-20 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide">
           <div className="text-center text-yellow-500 z-10 text-2xl">
             Our Roadmap
           </div>
