@@ -60,7 +60,7 @@ const MiddleSection = styled.section`
   @media (max-width: 768px) {
     /* Apply relative positioning on small screens */
     position: relative;
-    margin: 20px;
+    margin: 30px;
   }
 
   @media (min-width: 769px) {

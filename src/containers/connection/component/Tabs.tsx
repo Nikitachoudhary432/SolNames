@@ -16,7 +16,7 @@ export const ConnectionTabs = () => {
 
   return (
     <Wrapper className="p-6 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-center ">
-      <Tabs value={value} onChange={handleChange}>
+      <Tabs value={value} onChange={handleChange} >
         <Tab value="1" label="Select wallet on Solana" className="tab-items"  />
         <Tab value="2" label="Choose token to connect" className="tab-items" />
         <Link to="/cart" className="text-white">
@@ -31,6 +31,7 @@ const Wrapper = styled.div`
   .MuiTabs-root {
     .MuiTabs-flexContainer {
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     button {
@@ -44,7 +45,7 @@ const Wrapper = styled.div`
       text-transform: none;
       min-width: unset;
       min-height: unset;
-      padding: 6px 8px;
+      padding: 6px 6px;
       border-radius: 4px;
     }
 
