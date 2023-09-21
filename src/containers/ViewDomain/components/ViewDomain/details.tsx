@@ -34,8 +34,8 @@ export const Detail = () => {
   };
 
   return (
-    <div className="p-4 px-8 w-auto lg:w-full flex flex-col justify-evenly items-left ">
-      <div className="grid lg:gap-10 gap-3 lg:grid-cols-3 mt-12">
+    <div className="p-2 md:p-4 px-4 md:px-8 w-auto lg:w-full flex flex-col justify-evenly items-left ">
+      <div className="grid lg:gap-10 gap-1 md:gap-3 lg:grid-cols-3 mt-12">
         <div>
           <Wrapper className="p-6 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-center ">
             <img src={View1} alt="" className="relative" />

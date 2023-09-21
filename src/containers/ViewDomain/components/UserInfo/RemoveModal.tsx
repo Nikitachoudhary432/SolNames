@@ -21,9 +21,9 @@ export const RemoveModal = (props: any) => {
       >
         Confirm Details
       </Typography>
-      <div className="flex flex-col justify-center items-center mt-4 pb-4 w-full">
-        <div className="flex flex-col md:flex-row justify-around w-full items-center p-2 bg-[#262626] rounded-lg ">
-          <img src={SubDomains} alt="" className="mr-2" />
+      <div className="flex flex-col justify-center items-center mt-4 w-full">
+        <div className="flex md:flex-row justify-around w-full items-center p-2 bg-[#262626] rounded-lg ">
+          <img src={SubDomains} alt="" className="mr-1 md:mr-2 w-12 md:w-auto" />
           <div className="flex items-center text-sm sm:text-base lg:text-md">
             <Head className="text-[#E5E5E5]">Jamesmusa</Head>
             <Text className="text-[#757a7b]">.solnames</Text>

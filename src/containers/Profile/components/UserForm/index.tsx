@@ -13,8 +13,8 @@ export const UserForm = () => {
   };
 
   return (
-    <Wrapper className="p-4 px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left bg-[#121212] ">
-      <div className="flex flex-col md:flex-row  justify-between items-center w-full">
+    <Wrapper className="p-4 px-1 lg:px-8 sm:w-full w-full lg:w-full flex flex-col justify-evenly items-left bg-[#121212] ">
+      <div className="flex flex-col md:flex-row  justify-between items-center w-full px-8">
         <div className="w-full">
           <Title className="text-2xl my-5 ">General information</Title>
           <Text className="text-[#A6A6A6]">Add all Personal Information </Text>
@@ -46,7 +46,7 @@ export const UserForm = () => {
             sx={{
               width: '100%',
               padding: '10px',
-              paddingInlineStart: '50px',
+             paddingInlineStart: '40px',
               marginTop: '10px',
             }}
             placeholder="Readu Ceuca"
@@ -61,7 +61,7 @@ export const UserForm = () => {
             sx={{
               width: '100%',
               padding: '10px',
-              paddingInlineStart: '60px',
+              paddingInlineStart: '40px',
               marginTop: '10px',
             }}
             placeholder="xnmane anamma"
@@ -76,7 +76,7 @@ export const UserForm = () => {
             sx={{
               width: '100%',
               padding: '10px',
-              paddingInlineStart: '60px',
+              paddingInlineStart: '40px',
               marginTop: '10px',
             }}
             placeholder="0x123345543467as23d"
@@ -91,7 +91,7 @@ export const UserForm = () => {
             sx={{
               width: '100%',
               padding: '10px',
-              paddingInlineStart: '60px',
+              paddingInlineStart: '40px',
               marginTop: '10px',
             }}
             placeholder="@ReaduOfficial"
@@ -106,7 +106,7 @@ export const UserForm = () => {
             sx={{
               width: '100%',
               padding: '10px',
-              paddingInlineStart: '60px',
+              paddingInlineStart: '40px',
               marginTop: '10px',
             }}
             placeholder="@Readu123"
@@ -121,7 +121,7 @@ export const UserForm = () => {
             sx={{
               width: '100%',
               padding: '10px',
-              paddingInlineStart: '60px',
+              paddingInlineStart: '40px',
               marginTop: '10px',
             }}
             placeholder="xxn@Readu123"

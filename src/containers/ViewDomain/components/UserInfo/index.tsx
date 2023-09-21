@@ -76,7 +76,7 @@ export const UserInfo = () => {
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              <Box className="w-[60%] lg:w-[40%] md:w-[50%]">
+              <Box className="w-[79%] lg:w-[40%] md:w-[50%]">
                 {removeModalOpen ? (
                   <RemoveModal onClose={() => setRemoveModalOpen(false)} />
                 ) : (
